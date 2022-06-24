@@ -3,7 +3,9 @@
 
 Neural networks reconstruct a quantum state from measurements. I use a supervised approach (feed forward network) and an unsupervised approach (autoencoder). Single and two qubit systems are considered.
 
-![autoencoder_simple](https://user-images.githubusercontent.com/61095597/175539081-ae022f59-b8ee-418f-9b09-f934bc25f205.gif)
+![ae_graphic](https://user-images.githubusercontent.com/61095597/175542694-52c8b2b4-9c93-4233-99b6-99a6b82e32b4.png)
+
+
 
 ## Dataset Generation
 
@@ -52,5 +54,5 @@ This is supported by the experiment.
 
 We further tune single parameters of the quantum state rho and observe mostly linear behavior. Nonlinear behavior is oberved in 2/9 cases.
 
-*Thesis of bachelor's degree in physics at the university of Innsbruck.
+*Bachelor's degree in physics at the University of Innsbruck.\
 Supervised by Prof. Dr. Hans J. Briegel and Hendrik Poulsen Nautrup, PhD*
