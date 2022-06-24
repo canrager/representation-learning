@@ -1,32 +1,56 @@
-# Learning State Representation for Quantum Systems
+# Learning Qubit Representations
 
 
+Neural networks reconstruct a quantum state from measurements. I use a supervised approach (feed forward network) and an unsupervised approach (autoencoder). Single and two qubit systems are considered.
 
-Neural networks reconstruct the quantum state from measurements. I use a supervised approach (feed forward network) and an unsupervised approach (autoencoder). Single and two qubit systems are considered.
+![autoencoder_simple](https://user-images.githubusercontent.com/61095597/175539081-ae022f59-b8ee-418f-9b09-f934bc25f205.gif)
 
-## Dataset generation
+## Dataset Generation
+
 One datapoint 
 ($\rho$, $\mathbf{p}$)
 consists of a mixed quantum state 
 $\rho$ 
 and its measurement probabilities 
 $\mathbf{p}$
-for a set of projective valued measurements 
-{
-$\hat{P_i}$
-}
-${}_i$
-(PVMs).
+for a set of projective valued measurements (PVMs) called
+$\hat{P_i}$.
 Here, 
 $p_i = \mathrm{Tr}(\rho \hat{P_i})$
-is the probability of measuring state $\rho$ along the projector ${\hat{P_i}$.
+is the probability of measuring state 
+$\rho$ 
+along the projector 
+$\hat{P_i}$
+.
 
-Across a dataset multiple states are measured with the same set of PVMs.
-I sample mixed quantum states and a sets of projective valued measurements (PVMs) from a uniform distribution. $\mathbf{p}$ is a vector contanining the probabilities of measuring a quantum state $\rho$ with a set of PVMs P . 
+All states in a dataset are measured with the same set of PVMs.
+I sample mixed quantum states and a sets of PVMs from a uniform distribution. 
 
 ## Supervised State Reconstruction
 
+In the supervised approach a feedforward network reconstructs a given state representation from measurement data p. This model can reconstruct unseen rho measured with the same set of PVMs used in the training dataset.
+
+
 ## Unsupervised State Reconstruction
 
-Thesis of bachelor's degree in physics at the university of Innsbruck.
-Supervised by 
+An encoder maps the measurement data 
+$\mathbf{p}$
+to a latent layer 
+$\mathbf{l}$ 
+with 
+$\mathrm{dim} \mathbf{l} \l \mathrm{dim} \mathbf{p}. 
+From the latent representation
+$\mathbf{l}$ 
+a decoder reconstructs the measurement data 
+$\mathbf{p}$ .
+
+As a system of $N$
+qubits has $4N-1$
+degrees of freedom, we expect the reconstruction error to rise significantly after for \mathrm{dim} \mathbf{l}
+smaller $4N -1$. 
+This is supported by the experiment.
+
+We further tune single parameters of the quantum state rho and observe mostly linear behavior. Nonlinear behavior is oberved in 2/9 cases.
+
+*Thesis of bachelor's degree in physics at the university of Innsbruck.
+Supervised by Prof. Dr. Hans J. Briegel and Hendrik Poulsen Nautrup, PhD*
