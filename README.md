@@ -1,9 +1,8 @@
 # Learning Quantum State Representations
 
+We reconstruct a quantum state from measurements with shallow neural networks. We apply both a supervised approach with feedforward networks and an unsupervised approach with autoencoders (shown below).
 
-Neural networks reconstruct a quantum state from measurements. I use a supervised and an unsupervised approach (as shown below). 
-
-![ae_graphic](https://user-images.githubusercontent.com/61095597/175553056-1a360cee-b6b5-4462-9155-a44d79daddf2.png)
+![ae_graphic](https://user-images.githubusercontent.com/61095597/175664443-8e235bb3-5df9-42d3-a1aa-80244fd157e9.png)
 
 _An Encoder_ $E$
 _maps the measurement probabilities_ $\mathbf{p}$
