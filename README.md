@@ -3,9 +3,7 @@
 
 Neural networks reconstruct a quantum state from measurements. I use a supervised approach (feed forward network) and an unsupervised approach (autoencoder). Single and two qubit systems are considered.
 
-![ae_graphic](https://user-images.githubusercontent.com/61095597/175542694-52c8b2b4-9c93-4233-99b6-99a6b82e32b4.png)
-
-
+![ae_graphic](https://user-images.githubusercontent.com/61095597/175543097-53116831-a238-43f3-9de5-026cbcc113fa.png)
 
 ## Dataset Generation
 
